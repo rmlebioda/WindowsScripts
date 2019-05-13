@@ -1,0 +1,1 @@
+Windows scripts to help dealing with Windows annoying features
