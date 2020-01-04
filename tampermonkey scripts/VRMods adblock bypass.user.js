@@ -9,6 +9,6 @@
 // ==/UserScript==
 
 (function() {
-    var re = /vrcmods\.com\/download\/(?=\w)/;
+    var re = /vrcmods\.com\/download\/(?=\d)/;
     window.location = document.URL.replace(re, "vrmods.com/download/direct/")
 })();
