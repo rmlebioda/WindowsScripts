@@ -4,11 +4,11 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://vrcmods.com/
+// @match        *://vrcmods.com/*
 // @grant        none
 // ==/UserScript==
 
 (function() {
     var re = /vrcmods\.com\/download\/(?=\d)/;
-    window.location = document.URL.replace(re, "vrmods.com/download/direct/")
+    window.location = document.URL.replace(re, "vrcmods.com/download/direct/")
 })();
