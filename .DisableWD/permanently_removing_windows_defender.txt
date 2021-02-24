@@ -1,0 +1,6 @@
+Old script does not work anymore on Win10 20H2.
+This instruction works on 20H2.
+
+1. Download AdvancedRun.exe
+2. Run cmd as admin
+3. Run command: del /s /q "C:\\ProgramData\\Microsoft\\Windows Defender\\*"
