@@ -6,4 +6,5 @@ This instruction works on 20H2.
 2. Run cmd as TrustedInstaller (important)
 3. Run command:
 del /s /q "C:\ProgramData\Microsoft\Windows Defender\*"
+del /s /q "C:\Program Files\Windows Defender\*"
 4. Reboot
