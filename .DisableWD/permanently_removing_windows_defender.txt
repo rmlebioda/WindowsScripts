@@ -4,7 +4,19 @@ This instruction works on 20H2.
 0. Disable RealTime protection from windows defender
 1. Download AdvancedRun.exe
 2. Run cmd as TrustedInstaller (important)
-3. Run command:
+3. Run commands (bloatware, telemetry, windows defender, task scheduler defragmentation, optimizers):
 del /s /q "C:\ProgramData\Microsoft\Windows Defender\*"
 del /s /q "C:\Program Files\Windows Defender\*"
-4. Reboot
+move "C:\Windows\System32\defragsvc.dll" "C:\Windows\System32\defragsvc_old.dll"
+move "C:\Windows\System32\CompatTelRunner.exe" "C:\Windows\System32\CompatTelRunner_old.exe"
+schtasks /delete /tn "\Microsoft\Windows\.NET Framework\.NET Framework NGEN v4.0.30319" /f
+schtasks /delete /tn "\Microsoft\Windows\.NET Framework\.NET Framework NGEN v4.0.30319 64" /f
+schtasks /delete /tn "\Microsoft\Windows\.NET Framework\.NET Framework NGEN v4.0.30319 Critical" /f
+schtasks /delete /tn "\Microsoft\Windows\.NET Framework\.NET Framework NGEN v4.0.30319 64 Critical" /f
+schtasks /delete /tn "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /f
+schtasks /delete /tn "\Microsoft\Windows\Application Experience\PcaPatchDbTask" /f
+schtasks /delete /tn "\Microsoft\Windows\Application Experience\ProgramDataUpdater" /f
+schtasks /delete /tn "\Microsoft\Windows\Application Experience\StartupAppTask" /f
+4. Optionally remove Windows Update:
+sc.exe delete wuauserv
+5. Reboot
