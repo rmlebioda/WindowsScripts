@@ -13,4 +13,5 @@ for PRD in $JB_PRODUCTS; do
 	# those 2 below were necessary for dotCover and dotTrace resets
 	rm -rf ~/.java/.userPrefs/jetbrains/dc/
 	rm -rf ~/.java/.userPrefs/jetbrains/dpn/
+	rm -rf ~/.java/.userPrefs/jetbrains/pmaterialui/
 done
